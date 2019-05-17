@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-   <Version>0.0.2-rc.1</Version>
+   <Version>0.0.3-rc.1</Version>
    <Authors>Moiseeva_Neshto</Authors>
    <Company>arl-shipping.com</Company>
    <Product>lr2</Product>
