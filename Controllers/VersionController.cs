@@ -5,6 +5,8 @@ using to.Models;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Reflection;
+namespace to.Controllers
+{
 
    [Route("api/[controller]")]
    [ApiController]
@@ -14,15 +16,16 @@ using System.Reflection;
        [HttpGet]
        public ActionResult<string> Get()
        {
-            var versionInfo = new Version
-            {
-                Company = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyCompanyAttribute>().Company,
-                Product = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyProductAttribute>().Product,
-                ProductVersion = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion
-            };
-           //return Ok(Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion);
-        return Ok(versionInfo);
+           // var versionInfo = new Version
+           // {
+            //    Company = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyCompanyAttribute>().Company,
+            //    Product = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyProductAttribute>().Product,
+             //   ProductVersion = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion
+           // };
+           return Ok(Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion);
+        //return Ok(versionInfo);
        }
    }
+}
 
 

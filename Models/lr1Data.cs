@@ -1,7 +1,13 @@
+using System;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+
 namespace to.Models
 {
     public class lr1Data
     {
+         public Guid Id { get; set; } = Guid.Empty;
         public string id_goods { get; set; }
         public string name { get; set; }
         public double price { get; set; }
