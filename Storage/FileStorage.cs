@@ -48,7 +48,7 @@ namespace to.Storage
                 }
             }
         }
-        
+         public string StorageType => $"{nameof(FileStorage)}";
         private void Flush()
         {
             var serializedContents = JsonConvert.SerializeObject(All);
